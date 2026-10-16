@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 4: HTML forms, Bootstrap styling, and validation examples.">
+  <title>Assignment 4 · Forms &amp; Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-mark">A</span><span>Alsh<span class="brand-light">lab</span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="task0.html">Task 0</a></li>
+          <li class="nav-item"><a class="nav-link" href="task1.html">Task 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="task2.html">Task 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="task3.html">Task 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="task4.html">Task 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page-container">
+    <section class="home-hero row align-items-center">
+      <div class="col-lg-9">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> FRONTEND DEVELOPMENT · ASSIGNMENT 04</p>
+        <h1 class="display-title">Forms made clear<br><span>Validation made useful</span></h1>
+        <p class="hero-copy">Guide to forms, Bootstrap components, and friendly validation feedback</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-primary-soft" href="task0.html">Explore the tasks <span aria-hidden="true">→</span></a>
+          <a class="btn btn-link-clean" href="task4.html">View the final form</a>
+        </div>
+        <p class="student-line"><strong>Student:</strong> Alisher Ospanov <span aria-hidden="true">·</span> <strong>Group:</strong> SE-2526</p>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="journey-title">
+      <div class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-3">
+        <div><p class="eyebrow">THE LEARNING PATH</p><h2 id="journey-title">Five steps, one complete assignment</h2></div>
+        <p class="section-intro">Each page demonstrates one requirement from the brief<br class="d-none d-md-block"> Use the navigation to move between examples</p>
+      </div>
+      <div class="row g-3 task-grid">
+        <div class="col-md-6 col-lg-4"><a class="task-card" href="task0.html"><span class="task-number">00</span><span class="task-arrow" aria-hidden="true">↗</span><span class="task-tag">PART 1 · BASICS</span><h3>Simple contact form</h3><p>Labels, text and email inputs, a message area, and a submit button</p><span class="task-link">Open task <span aria-hidden="true">→</span></span></a></div>
+        <div class="col-md-6 col-lg-4"><a class="task-card" href="task1.html"><span class="task-number">01</span><span class="task-arrow" aria-hidden="true">↗</span><span class="task-tag">PART 1 · HTML5</span><h3>Built-in validation</h3><p>Required fields, email format, character limits, and native browser feedback</p><span class="task-link">Open task <span aria-hidden="true">→</span></span></a></div>
+        <div class="col-md-6 col-lg-4"><a class="task-card" href="task2.html"><span class="task-number">02</span><span class="task-arrow" aria-hidden="true">↗</span><span class="task-tag">PART 2 · BOOTSTRAP</span><h3>Styled contact form</h3><p>Bootstrap form controls, responsive grid, placeholders, and helper text</p><span class="task-link">Open task <span aria-hidden="true">→</span></span></a></div>
+        <div class="col-md-6 col-lg-4"><a class="task-card" href="task3.html"><span class="task-number">03</span><span class="task-arrow" aria-hidden="true">↗</span><span class="task-tag">PART 2 · FEEDBACK</span><h3>Bootstrap validation</h3><p>Live valid and invalid states with clear feedback below each field</p><span class="task-link">Open task <span aria-hidden="true">→</span></span></a></div>
+        <div class="col-md-6 col-lg-4"><a class="task-card task-card-featured" href="task4.html"><span class="task-number">04</span><span class="task-arrow" aria-hidden="true">↗</span><span class="task-tag">PART 3 · FINAL PROJECT</span><h3>Registration form</h3><p>A responsive sign-up form with password matching and validation feedback</p><span class="task-link">Open task <span aria-hidden="true">→</span></span></a></div>
+        <div class="col-md-6 col-lg-4"><div class="assignment-note"><span class="note-icon">✳</span><h3>What you can practice</h3><p>Try empty fields, an invalid email, and a password shorter than eight characters. Notice how each task responds</p><span class="note-caption">BEST VIEWED ON DESKTOP OR MOBILE</span></div></div>
+      </div>
+    </section>
+
+    <section class="bottom-banner d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+      <div><p class="eyebrow mb-2">READY FOR THE LAST STEP?</p><h2>Try the complete registration flow</h2></div>
+      <a class="btn btn-light-cta" href="task4.html">Open registration <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-column flex-sm-row justify-content-between gap-2"><span>Assignment 4 · Forms &amp; Validation</span><span>Built with HTML, CSS, JavaScript, and Bootstrap</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

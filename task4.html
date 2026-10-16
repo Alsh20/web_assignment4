@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Task 4: a responsive registration form with HTML5 and Bootstrap validation feedback">
+    <title>Task 4 · Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-mark">A</span><span>Alsh<span class="brand-light">lab</span></span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task0.html">Task 0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task1.html">Task 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task2.html">Task 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task3.html">Task 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task4.html">Task 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container page-container task-page">
+      <div class="task-heading">
+        <a class="back-link" href="index.html">← All tasks</a>
+        <div class="task-meta"><span class="task-pill">TASK 04</span><span>PART 3 · ADVANCED FORM PROJECT</span>
+        </div>
+        <h1>Your next chapter starts here</h1>
+        <p class="task-lead">Create an account with a responsive Bootstrap layout and helpful validation at every step</p>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <section class="form-panel registration-panel">
+            <div class="panel-heading">
+              <div><span class="panel-kicker">CREATE YOUR ACCOUNT</span>
+                <h2>Registration form</h2>
+              </div>
+              <span class="panel-step">05 / 05</span>
+            </div>
+            <form
+              class="needs-validation"
+              data-validate-form
+              data-success-message="Registration details look good! This demo does not create or store an account"
+              novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="first-name" class="form-label">First name <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="first-name"
+                    name="firstName"
+                    type="text"
+                    class="form-control"
+                    placeholder="First name"
+                    autocomplete="given-name"
+                    required
+                    minlength="2"
+                    maxlength="40"
+                    data-validate
+                    data-required-message="First name is required"
+                    data-invalid-message="Use at least 2 characters">
+                  <div class="invalid-feedback">First name is required
+                  </div>
+                  <div class="valid-feedback">Looks good!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="last-name" class="form-label">Last name <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="last-name"
+                    name="lastName"
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                    autocomplete="family-name"
+                    required
+                    minlength="2"
+                    maxlength="40"
+                    data-validate
+                    data-required-message="Last name is required"
+                    data-invalid-message="Use at least 2 characters">
+                  <div class="invalid-feedback">Last name is required
+                  </div>
+                  <div class="valid-feedback">Looks good!
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registration-email" class="form-label">Email <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="registration-email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                    maxlength="100"
+                    data-validate
+                    data-required-message="Email is required"
+                    data-invalid-message="Enter a valid email address">
+                  <div class="invalid-feedback">Email is required
+                  </div>
+                  <div class="valid-feedback">Email looks good!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="registration-password" class="form-label">Password <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="registration-password"
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="At least 8 characters"
+                    autocomplete="new-password"
+                    required
+                    minlength="8"
+                    maxlength="64"
+                    data-validate
+                    data-password-source
+                    data-required-message="Password is required"
+                    data-invalid-message="Password must be at least 8 characters">
+                  <div class="form-text">Use at least 8 characters
+                  </div>
+                  <div class="invalid-feedback">Password is required
+                  </div>
+                  <div class="valid-feedback">Strong enough for this demo
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="confirm-password" class="form-label">Confirm password <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="confirm-password"
+                    name="confirmPassword"
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter your password again"
+                    autocomplete="new-password"
+                    required
+                    data-validate
+                    data-password-confirm="#registration-password"
+                    data-required-message="Please confirm your password"
+                    data-invalid-message="Passwords must match">
+                  <div class="invalid-feedback">Please confirm your password
+                  </div>
+                  <div class="valid-feedback">Passwords match!
+                  </div>
+                </div>
+                <fieldset class="col-md-6" data-radio-group="gender">
+                  <legend class="form-label fs-6">Gender <span class="required-star" aria-hidden="true">*</span></legend>
+                  <div class="d-flex flex-wrap gap-3 pt-1">
+                    <div class="form-check">
+                      <input class="form-check-input" id="gender-female" name="gender" type="radio" value="female" required>
+                      <label class="form-check-label" for="gender-female">Female</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="gender-male" name="gender" type="radio" value="male" required>
+                      <label class="form-check-label" for="gender-male">Male</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="gender-other" name="gender" type="radio" value="other" required>
+                      <label class="form-check-label" for="gender-other">Other</label>
+                    </div>
+                  </div>
+                  <div class="invalid-feedback" data-group-feedback>Choose one option
+                  </div>
+                </fieldset>
+                <div class="col-md-6">
+                  <label for="country" class="form-label">Country <span class="required-star" aria-hidden="true">*</span></label>
+                  <select id="country" name="country" class="form-select" required data-validate data-required-message="Please select your country">
+                    <option value="" selected disabled>Select your country</option>
+                    <option value="kz">Kazakhstan</option>
+                    <option value="kg">Kyrgyzstan</option>
+                    <option value="uz">Uzbekistan</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please select your country
+                  </div>
+                  <div class="valid-feedback">Country selected
+                  </div>
+                </div>
+                <fieldset class="col-12">
+                  <legend class="form-label fs-6 mb-2">Hobbies <span class="optional-label">(optional)</span></legend>
+                  <div class="d-flex flex-wrap gap-3">
+                    <div class="form-check">
+                      <input class="form-check-input" id="hobby-reading" name="hobbies" type="checkbox" value="reading">
+                      <label class="form-check-label" for="hobby-reading">Reading</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="hobby-sports" name="hobbies" type="checkbox" value="sports">
+                      <label class="form-check-label" for="hobby-sports">Sports</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="hobby-travel" name="hobbies" type="checkbox" value="travel">
+                      <label class="form-check-label" for="hobby-travel">Travel</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="hobby-music" name="hobbies" type="checkbox" value="music">
+                      <label class="form-check-label" for="hobby-music">Music</label>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="col-12 d-flex flex-wrap gap-3 pt-2">
+                  <button class="btn btn-primary-soft" type="submit">Create account <span aria-hidden="true">→</span></button>
+                  <button class="btn btn-reset" type="reset">Reset form</button>
+                </div>
+                <div class="col-12">
+                  <p class="form-status" role="status" aria-live="polite" hidden></p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+        <aside class="col-lg-4">
+          <div class="criteria-panel">
+            <p class="eyebrow">FINAL PROJECT CHECKLIST</p>
+            <h2>All required fields, in one place</h2>
+            <ul class="criteria-list">
+              <li><span>✓</span> First name and last name
+              </li>
+              <li><span>✓</span> Email and matching passwords
+              </li>
+              <li><span>✓</span> Gender radio buttons
+              </li>
+              <li><span>✓</span> Hobbies checkboxes
+              </li>
+              <li><span>✓</span> Country dropdown
+              </li>
+              <li><span>✓</span> Submit and reset buttons
+              </li>
+              <li><span>✓</span> Responsive Bootstrap grid
+              </li>
+              <li><span>✓</span> HTML5 + Bootstrap feedback
+              </li>
+            </ul>
+            <div class="tip-box"><strong>Try it</strong>
+              <p>Use a short password, then enter different passwords in the two password fields. Fix each highlighted field before submitting</p>
+            </div>
+            <p class="privacy-note">Demo only · No account or personal data is saved</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2"><span>Assignment 4 · Forms &amp; Validation</span>
+        <a href="index.html">Back to overview ↑</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="assets/js/forms.js"></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Task 3: demonstrate Bootstrap is-valid and is-invalid feedback styles">
+    <title>Task 3 · Bootstrap Validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-mark">A</span><span>Alsh<span class="brand-light">lab</span></span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task0.html">Task 0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task1.html">Task 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task2.html">Task 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task3.html">Task 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task4.html">Task 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container page-container task-page">
+      <div class="task-heading">
+        <a class="back-link" href="index.html">← All tasks</a>
+        <div class="task-meta"><span class="task-pill">TASK 03</span><span>PART 2 · BOOTSTRAP VALIDATION</span>
+        </div>
+        <h1>Feedback that guides</h1>
+        <p class="task-lead">The fields respond as you type, so it’s easy to see what needs attention and what is ready</p>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <section class="form-panel">
+            <div class="panel-heading">
+              <div><span class="panel-kicker">LIVE FIELD STATES</span>
+                <h2>Leave your contact details</h2>
+              </div>
+              <span class="panel-step">04 / 05</span>
+            </div>
+            <form
+              class="needs-validation"
+              data-validate-form
+              data-success-message="Looks good! Your form is valid for this demo"
+              novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="validated-name" class="form-label">Name <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="validated-name"
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Your name"
+                    required
+                    minlength="2"
+                    maxlength="50"
+                    data-validate
+                    data-required-message="Name is required"
+                    data-invalid-message="Use at least 2 characters">
+                  <div class="invalid-feedback" aria-live="polite">Name is required
+                  </div>
+                  <div class="valid-feedback">Looks good!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validated-email" class="form-label">Email <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    id="validated-email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                    required
+                    maxlength="100"
+                    data-validate
+                    data-required-message="Email is required"
+                    data-invalid-message="Enter a valid email address">
+                  <div class="invalid-feedback" aria-live="polite">Email is required
+                  </div>
+                  <div class="valid-feedback">Looks good!
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="validated-message" class="form-label">Message <span class="required-star" aria-hidden="true">*</span></label>
+                  <textarea
+                    id="validated-message"
+                    name="message"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Write at least 10 characters"
+                    required
+                    minlength="10"
+                    maxlength="500"
+                    data-validate
+                    data-required-message="Message is required"
+                    data-invalid-message="Please write at least 10 characters"></textarea>
+                  <div class="invalid-feedback" aria-live="polite">Message is required
+                  </div>
+                  <div class="valid-feedback">Thanks for sharing the details
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary-soft" type="submit">Validate form <span aria-hidden="true">→</span></button>
+                  <p class="form-status" role="status" aria-live="polite" hidden></p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+        <aside class="col-lg-5">
+          <div class="criteria-panel">
+            <p class="eyebrow">BOOTSTRAP FEEDBACK</p>
+            <h2>See each field’s state</h2>
+            <ul class="criteria-list">
+              <li><span>✓</span> <code>.is-valid</code> and <code>.is-invalid</code>
+              </li>
+              <li><span>✓</span> Feedback appears below inputs
+              </li>
+              <li><span>✓</span> HTML5 validity rules power the check
+              </li>
+              <li><span>✓</span> Try valid and invalid values
+              </li>
+            </ul>
+            <div class="tip-box"><strong>Try it</strong>
+              <p>Type an invalid email, then correct it. Submit with an empty field to see the required-field feedback</p>
+            </div>
+          </div>
+          <a class="next-task-link" href="task4.html"><span><small>NEXT UP</small><strong>Registration form</strong></span><span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2"><span>Assignment 4 · Forms &amp; Validation</span>
+        <a href="index.html">Back to overview ↑</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="assets/js/forms.js"></script>
+  </body>
+</html>

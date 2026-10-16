@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Task 1: demonstrate native HTML5 form validation attributes">
+    <title>Task 1 · HTML5 Validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-mark">A</span><span>Alsh<span class="brand-light">lab</span></span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task0.html">Task 0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task1.html">Task 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task2.html">Task 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task3.html">Task 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task4.html">Task 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container page-container task-page">
+      <div class="task-heading">
+        <a class="back-link" href="index.html">← All tasks</a>
+        <div class="task-meta"><span class="task-pill">TASK 01</span><span>PART 1 · HTML5 VALIDATION</span>
+        </div>
+        <h1>Let the browser help</h1>
+        <p class="task-lead">Use built-in HTML5 attributes to catch missing fields and invalid email addresses before submission</p>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <section class="form-panel">
+            <div class="panel-heading">
+              <div><span class="panel-kicker">NATIVE HTML VALIDATION</span>
+                <h2>Contact details</h2>
+              </div>
+              <span class="panel-step">02 / 05</span>
+            </div>
+            <form data-demo-form data-success-message="Looks good! All required fields passed the browser's HTML5 validation">
+              <div class="mb-4">
+                <label for="native-name" class="form-label">Name <span class="required-star" aria-hidden="true">*</span></label>
+                <input
+                  id="native-name"
+                  name="name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Your name"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  autocomplete="name">
+                <div class="form-text">Enter 2–50 characters
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="native-email" class="form-label">Email <span class="required-star" aria-hidden="true">*</span></label>
+                <input
+                  id="native-email"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="you@example.com"
+                  required
+                  maxlength="100"
+                  autocomplete="email">
+                <div class="form-text">Use a valid email address
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="native-message" class="form-label">Message <span class="required-star" aria-hidden="true">*</span></label>
+                <textarea
+                  id="native-message"
+                  name="message"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Write your message"
+                  required
+                  minlength="10"
+                  maxlength="500"></textarea>
+                <div class="form-text">Enter 10–500 characters
+                </div>
+              </div>
+              <button class="btn btn-primary-soft" type="submit">Check and submit <span aria-hidden="true">→</span></button>
+              <p class="form-status" role="status" aria-live="polite" hidden></p>
+            </form>
+          </section>
+        </div>
+        <aside class="col-lg-5">
+          <div class="criteria-panel">
+            <p class="eyebrow">HTML5 ATTRIBUTES</p>
+            <h2>No custom validation script needed</h2>
+            <ul class="criteria-list">
+              <li><span>✓</span> <code>required</code> prevents empty fields
+              </li>
+              <li><span>✓</span> <code>type="email"</code> checks email format
+              </li>
+              <li><span>✓</span> <code>minlength</code> and <code>maxlength</code> set limits
+              </li>
+              <li><span>✓</span> Browser displays its own guidance
+              </li>
+            </ul>
+            <div class="tip-box"><strong>Try it</strong>
+              <p>Submit the empty form, then try a malformed email such as “hello”. The browser will stop the submission and point to the field</p>
+            </div>
+          </div>
+          <a class="next-task-link" href="task2.html"><span><small>NEXT UP</small><strong>Bootstrap form styling</strong></span><span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2"><span>Assignment 4 · Forms &amp; Validation</span>
+        <a href="index.html">Back to overview ↑</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="assets/js/forms.js"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Task 2: style a responsive contact form with Bootstrap form classes and grid">
+    <title>Task 2 · Bootstrap Form Styling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-mark">A</span><span>Alsh<span class="brand-light">lab</span></span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task0.html">Task 0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task1.html">Task 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task2.html">Task 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task3.html">Task 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="task4.html">Task 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container page-container task-page">
+      <div class="task-heading">
+        <a class="back-link" href="index.html">← All tasks</a>
+        <div class="task-meta"><span class="task-pill">TASK 02</span><span>PART 2 · BOOTSTRAP FORMS</span>
+        </div>
+        <h1>Good forms feel effortless</h1>
+        <p class="task-lead">Bootstrap form classes and its grid system keep controls consistent and the layout responsive</p>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <section class="form-panel">
+            <div class="panel-heading">
+              <div><span class="panel-kicker">BOOTSTRAP COMPONENTS</span>
+                <h2>How can we help?</h2>
+              </div>
+              <span class="panel-step">03 / 05</span>
+            </div>
+            <form data-demo-form data-success-message="Thanks! Your message has been recorded for this demo">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="bootstrap-name" class="form-label">Name</label>
+                  <input id="bootstrap-name" name="name" type="text" class="form-control" placeholder="e.g. Alex Morgan">
+                  <div class="form-text">What should we call you?
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="bootstrap-email" class="form-label">Email</label>
+                  <input id="bootstrap-email" name="email" type="email" class="form-control" placeholder="name@example.com">
+                  <div class="form-text">We’ll reply to this address
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="bootstrap-topic" class="form-label">Topic</label>
+                  <select id="bootstrap-topic" name="topic" class="form-select">
+                    <option selected value="">Choose a topic</option>
+                    <option>General question</option>
+                    <option>Feedback</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="bootstrap-message" class="form-label">Message</label>
+                  <textarea
+                    id="bootstrap-message"
+                    name="message"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Tell us a little about what you need..."></textarea>
+                  <div class="form-text">A few details will help us give you a useful answer
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary-soft" type="submit">Send message <span aria-hidden="true">→</span></button>
+                  <p class="form-status" role="status" aria-live="polite" hidden></p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+        <aside class="col-lg-5">
+          <div class="criteria-panel">
+            <p class="eyebrow">BOOTSTRAP BUILDING BLOCKS</p>
+            <h2>A responsive layout in a few classes</h2>
+            <ul class="criteria-list">
+              <li><span>✓</span> <code>.form-control</code> and <code>.form-select</code>
+              </li>
+              <li><span>✓</span> <code>.row</code> with responsive columns
+              </li>
+              <li><span>✓</span> Helpful placeholders and helper text
+              </li>
+              <li><span>✓</span> Stacks neatly on smaller screens
+              </li>
+            </ul>
+            <div class="tip-box"><strong>Try it</strong>
+              <p>Resize the browser. Name and email sit side by side on wider screens and stack on smaller ones</p>
+            </div>
+          </div>
+          <a class="next-task-link" href="task3.html"><span><small>NEXT UP</small><strong>Bootstrap validation</strong></span><span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2"><span>Assignment 4 · Forms &amp; Validation</span>
+        <a href="index.html">Back to overview ↑</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="assets/js/forms.js"></script>
+  </body>
+</html>
